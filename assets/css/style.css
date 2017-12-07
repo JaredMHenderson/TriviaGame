@@ -1,0 +1,29 @@
+@font-face {
+    font-family: americanTypeWriter;
+    src: url(./assets/fonts/American Typewriter Regular.ttf);
+}
+
+.page-header {
+    text-align: center;
+}
+
+h1 {
+    font-family: americanTypeWriter;
+    text-align: center;
+}
+
+h2 {
+    font-family: americanTypeWriter;
+    text-align: center;
+}
+
+
+.radio {
+    font-family: americanTypeWriter;
+    text-align: center;
+}
+
+
+.startButton {
+    font-family: americanTypeWriter;
+}
