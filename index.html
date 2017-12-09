@@ -1,156 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <title>Office Trivia Page</title>
-
 </head>
 <body>
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="page-header">
-                <img src="./assets/images/logo.png">
-                    <h1>Doomsday Trivia Device</h1>
-                    <h2>5 Strikes and You get a homerun....</h2>
-                    <button type="button" class="btn btn-default startButton">Begin</button>
-            </div>
+    <div id="wrapper">
+        <h1>Office Trivia</h1>
+        <div id="subwrapper">
+            <button id="start">Start</button>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h1 class="timeRemaining"><span id="countdownClock"></span></h1>
-
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>At Jims house party, what does Pam find in Jims room that he later gives her as a gift?</h2>
-            <div class="radio">
-                <label><input type="radio" class="piggy" name="questionOne">Piggy Bank</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" class="sweater" name="questionOne">A sweater</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" class="yearbook" name="questionOne">Yearbook Picture</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" class="trophy" name="questionOne">Baseball Trophy</label>
-            </div>
-
-
-        </div>
-
-    </div>
-
-     <div class="row">
-        <div class="col-lg-12">
-            <h2>What food item caused the unintentional fire to start in the office building?</h2>
-            <div class="radio">
-                <label><input type="radio" name="questionTwo">Kevins homemade chilli</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionTwo">Ryans cheesy pita</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionTwo">Creeds mung beans</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionTwo">Michaels Pot Pie</label>
-            </div>
-
-
-        </div>
-
-    </div>
-
-     <div class="row">
-        <div class="col-lg-12">
-            <<h2>What animal did the employees of the office hold a funeral for in the parking lot?</h2>
-            <div class="radio">
-                <label><input type="radio" name="questionThree">A bird</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionThree">A racoon</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionThree">A turtle</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionThree">A bat</label>
-            </div>
-
-
-        </div>
-
-    </div>
-
-     <div class="row">
-        <div class="col-lg-12">
-            <h2>Jim sends Dwight on a quest for the Holy Grail, the instructsion are called what?</h2>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Threat Level Midnight</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">The Dunder Code</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Dunder Mifflin Infinity</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Second Life</label>
-            </div>
-
-
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Jim sends Dwight on a quest for the Holy Grail, the instructsion are called what?</h2>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Threat Level Midnight</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">The Dunder Code</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Dunder Mifflin Infinity</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="questionFour">Second Life</label>
-            </div>
-
-
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
-             <button type="button" class="btn btn-default submitButton" >Submit Answers</button>
-
-        </div>
-
-    </div>
-
-
-<script src="./assets/javascript/app.js"></script>
-
-
-</div>
-
+    <script type="text/javascript" src="./assets/logic.js"></script>
 
 </body>
 </html>
