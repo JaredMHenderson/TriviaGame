@@ -1,0 +1,28 @@
+@font-face {
+    font-family: americanTypeWriter;
+    src: url(./assets/fonts/American Typewriter Regular.ttf);
+}
+
+h1, h2, h3 {
+    font-family: americanTypeWriter;
+    text-align: center;
+}
+
+
+#wrapper {
+    text-align: center;
+}
+
+#start {
+    text-align: center;
+}
+
+#subwrapper {
+
+}
+
+.openingImage {
+    margin-top: 15px;
+}
+
+

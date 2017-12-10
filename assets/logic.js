@@ -2,6 +2,7 @@
 
 $('#start').on('click', function () {
     $('#start').remove();
+    $('#imageDivOne').remove();
     game.loadQuestion();
 });
 
@@ -16,21 +17,25 @@ $(document).on('click', '#reset', function(){
 var questions = [{
     question: 'At Jims house party, what does Pam find in Jims room that he later gives her as a gift?',
     answers: ['A Piggy Bank', 'A Sweater', 'A Yearbook Photo', 'A Baseball Trophy'],
-    answer: 'A Yearbook Photo'
+    answer: 'A Yearbook Photo',
+    image: './assets/images/jimpic.png'
     }, {
     question: 'What food item caused the unintentional fire to start in the office building?',
     answers: ['Kevins homemade chilli', 'Ryans cheesy pita', 'Creeds Mung Beans', 'Michaels Chicken Pot Pie'],
-    answer: 'Ryans cheesy pita'
+    answer: 'Ryans cheesy pita',
+    image: './assets/images/ryan.jpg'
     }, {
     question: 'What animal did the employees of the office hold a funeral for in the parking lot?',
-    answers: ['A bird', 'A Racoon', 'A Turtle', 'A Bat'],
-    answer: 'A Bird'
+    answers: ['A Bird', 'A Racoon', 'A Turtle', 'A Bat'],
+    answer: 'A Bird',
+    image: './assets/images/birdfuneral.jpg'
     }, {
     question: 'Jim sends Dwight on a quest for the Holy Grail, the instructsion are called what?',
     answers: ['Threat Level Midnight', 'The Dunder Code', 'Dunder Mifflin Infinity', 'Second Life'],
-    answer: 'The Dunder Code'
-
-    }];
+    answer: 'The Dunder Code',
+    image: './assets/images/dwightpic.jpg'
+    }
+    ];
 
 var game = {
     questions: questions,
@@ -50,14 +55,14 @@ var game = {
     },
 
     loadQuestion: function(){
-
         timer = setInterval(game.countdown, 1000);
         $('#subwrapper').html(`<h2 id="counter">${'30'}</h2>`);
         $('#subwrapper').append('<h2>'+ questions[game.currentQuestion].question + '</h2>');
         for(var i = 0;i < questions[game.currentQuestion].answers.length; i++){
-            $('#subwrapper').append('<button class="answer-button" id ="button-'+i+' "data-name="'
+            $('#subwrapper').append('<button type="button" class="btn btn-default answer-button" id ="button-'+i+' "data-name="'
             +questions[game.currentQuestion].answers[i]+' ">' + questions[game.currentQuestion].answers[i]+'</button>');
         }
+
     },
 
     nextQuestion: function(){
@@ -90,7 +95,10 @@ var game = {
 
      clicked: function(e) {
         clearInterval(timer);
-                if($(e.target).data("name") == questions[game.currentQuestion].answer){
+        console.log($(e.target).attr("data-name"), $(e.target).attr("data-name").length);
+        console.log(questions[game.currentQuestion].answer);
+        console.log($(e.target).attr("data-name").trim() === questions[game.currentQuestion].answer.trim());
+                if($(e.target).attr("data-name").trim() === questions[game.currentQuestion].answer.trim()){
             game.answeredCorrectly();
         } else{
             game.answeredIncorrectly();
@@ -100,11 +108,12 @@ var game = {
     answeredCorrectly: function(){
         clearInterval(timer);
         game.correct++;
-        $('#subwrapper').html(`<h3>${'That is Correct!'}</h3`)
-        if(game.currentQuestion == questions.length){
-            setTimeout(game.results, 3*1000);
+        $('#subwrapper').html(`<h3>${'That is Correct!'}</h3`);
+         $('#subwrapper').append(`<img src = "${questions[game.currentQuestion].image}">`);
+        if(game.currentQuestion == questions.length-1){
+            setTimeout(game.results, 5000);
         } else {
-            setTimeout(game.nextQuestion, 3*1000);
+            setTimeout(game.nextQuestion, 5000);
         }
         console.log('Correct!');
 
@@ -117,7 +126,7 @@ var game = {
         if(game.currentQuestion == questions.length-1){
             setTimeout(game.results, 3000);
         } else {
-            setTimeout(game.nextQuestion, 3000);
+            setTimeout(game.nextQuestion, 5000);
         }
         console.log('Incorrect');
     },
