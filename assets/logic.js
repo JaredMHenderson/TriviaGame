@@ -39,7 +39,7 @@ var questions = [{
     correctsound: './assets/sounds/Neverpegged.mp3',
     wrongsound: './assets/sounds/Blackbear.mp3'
     }, {
-    question: 'Jim sends Dwight on a quest for the Holy Grail, the instructsion are called what?',
+    question: 'Jim sends Dwight on a quest for the Holy Grail, the instructions are called what?',
     answers: ['Threat Level Midnight', 'The Dunder Code', 'Dunder Mifflin Infinity', 'Second Life'],
     answer: 'The Dunder Code',
     image: './assets/images/dwightpic.jpg',
