@@ -89,7 +89,7 @@ var game = {
         game.unanswered++;
         $('#subwrapper').html(`<h1>${"TIME IS UP"}</h2>`);
         $('#subwrapper').append(`<h3>${"The Correct Answer is: "} ${questions[game.currentQuestion].answer}</h3>`);
-        if(game.currentQuestion == questions.length){
+        if(game.currentQuestion == questions.length-1){
             setTimeout(game.results, 3*1000);
         } else {
             setTimeout(game.nextQuestion, 3*1000);
